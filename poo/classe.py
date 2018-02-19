@@ -17,7 +17,7 @@ class Cao:
         print("Woof")
 
     '''
-    Similar o toString de Java, em Python há o __str__.
+    Similar ao toString de Java, em Python há o __str__.
     Esse método retorna o que será impresso ao passar um objeto Cao para print().
     '''
     def __str__(self):
@@ -49,7 +49,7 @@ class Cao:
 Criar objetos da classe Cao
 '''
 c1 = Cao('koba', "ouro")
-c2 = Cao('kobaa', "ouro")
+c2 = Cao('koba', "ouro")
 
 '''
 Executar um método da classe é como acessar um atributo.

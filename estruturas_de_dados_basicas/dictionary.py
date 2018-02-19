@@ -47,3 +47,18 @@ a = sorted(d, key=d.get, reverse=False)
 for i in a:
 	print(d[i])
 
+print('Remover elemento de chave 2 do dicionário')
+print('\tAntes:')
+print(d)
+print('\tDepois:')
+# del d[2]
+d.pop(2)
+print(d)
+
+print('Remover todos itens')
+d.clear()
+
+
+print('delete the dictionary itself')
+del d
+
