@@ -1,4 +1,4 @@
-'''
+"""
 Em python não há encapsulamento dos atributos, ou seja, todos atributos podem
 ser acessador diretamente. Para indicar para o programador que determinado
 atributo é para ser considerado privado, é utilizado single underscore.
@@ -8,7 +8,8 @@ com variáveis com mesmo nomes nas subclasses. Assim, subclasses não herdarão 
 atributos com dunders. Para tais atributos serem acessados é necessário uma forma
 'diferente' de acesso.
 
-'''
+"""
+
 
 class Encapsulation:
     def __init__(self, a, b, c):
@@ -30,6 +31,7 @@ print(myEncapsulation.__myPrivate) # irá dar erro, pois não pode acessar o atr
 Outro exemplo abaixo, com herança.
 '''
 
+
 class A:
     a = 1  # atributo publico
     __b = 2  # atributo privado a class A
@@ -41,6 +43,7 @@ class B(A):
     def __init__(self):
         print(self.a)
         print(self.__c)
+
 a = A()
 print(a.a)  # imprime 1
 

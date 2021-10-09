@@ -5,7 +5,7 @@ Organized as follows:
 
 * [Control flow](lacos_funcoes_recursos_etc)
 * [Some Basic data structures](estruturas_de_dados_basicas)
-* [OO](poo)
+* [Object Oriented](poo)
 * [Ploting charts from csv files](arquivos_e_graficos)
 * [Working with database](banco_de_dados)
 * [Handling Exceptions](excecoes)
