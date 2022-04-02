@@ -14,3 +14,8 @@ Organized as follows:
 * [Basic operations with Pandas lib](lib_pandas)
 * [Machine Learning with Scikit-learn](lib_sklearn)
 
+### poetry
+In order to export requirements.txt, just run:
+```shell
+poetry export --without-hashes -o requirements.txt
+```
