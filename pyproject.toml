@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "python"
+version = "0.1.0"
+description = ""
+authors = ["José Nunes <josenunesra@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+scikit-learn = "^1.0.2"
+matplotlib = "^3.5.1"
+pydataset = "^0.2.0"
+folium = "^0.12.1"
+dependency-injector = "^4.39.1"
+pymongo = "^4.0.2"
+seaborn = "^0.11.2"
+bokeh = "^2.4.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
