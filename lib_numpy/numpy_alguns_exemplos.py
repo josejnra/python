@@ -20,13 +20,11 @@ mat = np.column_stack(mat)
 print(mat)
 
 # matriz com duas colunas, resultado parecido com uma matriz transposta
-costs = np.column_stack(([2, 3, 2, 1, 3, 1, 1, 1],
-                         [7, 4, 7, 6, 6, 5, 7, 4]))
+costs = np.column_stack(([2, 3, 2, 1, 3, 1, 1, 1], [7, 4, 7, 6, 6, 5, 7, 4]))
 
 print(costs)
 
 # média dos valores da segunda coluna
-mean_costs = np.mean(costs[:,1])
+mean_costs = np.mean(costs[:, 1])
 
 print(mean_costs)
-

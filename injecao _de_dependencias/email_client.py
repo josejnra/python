@@ -24,12 +24,10 @@ class EmailReader(object):
 
 
 class Configs(containers.DeclarativeContainer):
-  config = providers.Configuration('config')
-  # other configs
+    config = providers.Configuration("config")
+    # other configs
 
 
 class Clients(containers.DeclarativeContainer):
-  email_client = providers.Singleton(EmailClient, Configs.config)
-  # other clients
-
-
+    email_client = providers.Singleton(EmailClient, Configs.config)
+    # other clients

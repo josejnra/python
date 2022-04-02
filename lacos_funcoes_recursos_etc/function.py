@@ -2,12 +2,13 @@
 def sum(a, b):
     return a + b
 
+
 c = sum(1, 3)
 print(c)
 
 # funções com valores padrões para seus argumentos
-def nome_completo(primeiro_nome, segundo_nome = "nunes"):
-    return (primeiro_nome + " " + segundo_nome)
+def nome_completo(primeiro_nome, segundo_nome="nunes"):
+    return primeiro_nome + " " + segundo_nome
 
 
 # funções com quantidade indefinidade de argumentos
@@ -16,8 +17,9 @@ def nome_completo(primeiro_nome, segundo_nome = "nunes"):
 def foo(*args):
     return sum(*args)
 
+
 # funções lambda
-a = lambda x: x*2
+a = lambda x: x * 2
 
 print(nome_completo("jose", "rodrigues"))
 print(nome_completo("jose"))

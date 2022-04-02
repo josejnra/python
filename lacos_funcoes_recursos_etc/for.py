@@ -1,5 +1,14 @@
 # percorrer listas
-nomes = ["jose", "talita", "aline santos", "jessica", "sabrina", "juliana", "julia", "sasha"]
+nomes = [
+    "jose",
+    "talita",
+    "aline santos",
+    "jessica",
+    "sabrina",
+    "juliana",
+    "julia",
+    "sasha",
+]
 
 print("Listar todos os elementos:")
 for nome in nomes:

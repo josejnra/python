@@ -7,8 +7,8 @@ class Email:
 
     mail_host = "smtp.gmail.com"
     mail_port = 587
-    user = 'email-destino@gmail.com'
-    password = 'opnreuqqaouvthiy'
+    user = "email-destino@gmail.com"
+    password = "opnreuqqaouvthiy"
     sender = "alguem@gmail.com"
 
     @classmethod
@@ -17,26 +17,26 @@ class Email:
         try:
 
             msg = MIMEMultipart()
-            msg['From'] = cls.sender
-            msg['To'] = to
-            msg['Subject'] = "Test"
+            msg["From"] = cls.sender
+            msg["To"] = to
+            msg["Subject"] = "Test"
 
-            text = MIMEText(body, 'html', 'utf-8')
+            text = MIMEText(body, "html", "utf-8")
             msg.attach(text)
 
             smtp = smtplib.SMTP(cls.mail_host, 25)
             smtp.connect(cls.mail_host, cls.mail_port)
             smtp.starttls()
             smtp.login(cls.user, cls.password)
-            smtp.sendmail(cls.sender, to.split(','), msg.as_string().encode('utf-8'))
+            smtp.sendmail(cls.sender, to.split(","), msg.as_string().encode("utf-8"))
             smtp.quit()
 
         except Exception as e:
-            print('DEU RUIM ' + str(e))
+            print("DEU RUIM " + str(e))
         finally:
             if smtp:
                 smtp.close()
 
 
-if __name__ == '__main__':
-    Email.send_mail('email-destino@gmail.com', 'CHEGOU?')
+if __name__ == "__main__":
+    Email.send_mail("email-destino@gmail.com", "CHEGOU?")

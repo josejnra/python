@@ -18,18 +18,18 @@ class Encapsulation:
         self.__myPrivate = c
 
 
-myEncapsulation = Encapsulation(1,2,3)
+myEncapsulation = Encapsulation(1, 2, 3)
 
 print(myEncapsulation.myPublic)
 print(myEncapsulation._myProtected)
-print(myEncapsulation._Encapsulation__myPrivate) # Acessar o atributo com dunders
-print(myEncapsulation.__myPrivate) # irá dar erro, pois não pode acessar o atributo
+print(myEncapsulation._Encapsulation__myPrivate)  # Acessar o atributo com dunders
+print(myEncapsulation.__myPrivate)  # irá dar erro, pois não pode acessar o atributo
 # com dunders diretamente
 
 
-'''
+"""
 Outro exemplo abaixo, com herança.
-'''
+"""
 
 
 class A:
@@ -44,16 +44,17 @@ class B(A):
         print(self.a)
         print(self.__c)
 
+
 a = A()
 print(a.a)  # imprime 1
 
 b = B()
-print(b.__b) # Erro, pois __b é privado a classe A.
-print(b.__c) # Erro, __c é um atributo privado, somente chamado pela classe.
+print(b.__b)  # Erro, pois __b é privado a classe A.
+print(b.__c)  # Erro, __c é um atributo privado, somente chamado pela classe.
 
-print(b._B__c) # Imprime __c = 3, muito pouco utilizada, mas existe.
+print(b._B__c)  # Imprime __c = 3, muito pouco utilizada, mas existe.
 
 
-'''
+"""
 link: http://prorum.com/index.php/2306/python-trata-encapsulamento-programacao-orientada-objeto
-'''
+"""

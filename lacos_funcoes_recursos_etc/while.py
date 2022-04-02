@@ -7,7 +7,7 @@ while imposto > 0:
     imposto = input("Imposto em % (ex: 27.5)? ")
     if not imposto:
         imposto = 27
-    elif imposto == 's':
+    elif imposto == "s":
         break
     else:
         imposto = float(imposto)

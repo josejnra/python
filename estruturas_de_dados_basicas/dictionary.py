@@ -1,4 +1,4 @@
-'''
+"""
 - São delimitados por chaves {} assim como os conjuntos.
 - São mutáveis.
 - Cada elemento do dicionário é uma combinação chave:valor.
@@ -7,32 +7,32 @@
 da chave é alterado para o novo valor.
 - While values can be of any data type and can repeat, keys must be of immutable type
 (string, number or tuple with immutable elements) and must be unique.
-'''
+"""
 
-d = {'jose':24, 'maria':30, 'pedro':15}
+d = {"jose": 24, "maria": 30, "pedro": 15}
 print(d)
 
 print("Acessar valor:")
-print(d['jose'])
+print(d["jose"])
 
 
 print("Inserir novos elementos:")
-d['jose'] = 20
-d['joao'] = 45
+d["jose"] = 20
+d["joao"] = 45
 print(d)
 
 print("Imprimir valores do dicionário:")
 for i in d:
-    print(d[i], end=' ')
+    print(d[i], end=" ")
 print()
 # ou
 print(d.values())
 
 print("Imprimir chaves do dicionário:")
 for i in d:
-    print(i, end=' ')
+    print(i, end=" ")
 print()
-#ou
+# ou
 print(d.keys())
 
 
@@ -42,23 +42,22 @@ print("jose" in d)
 
 
 print("Ordenar dicionário por valor:")
-d = {1:1.1, 2:3.14, 3:2.5, 4:2.8, 5:0.89}
+d = {1: 1.1, 2: 3.14, 3: 2.5, 4: 2.8, 5: 0.89}
 a = sorted(d, key=d.get, reverse=False)
 for i in a:
-	print(d[i])
+    print(d[i])
 
-print('Remover elemento de chave 2 do dicionário')
-print('\tAntes:')
+print("Remover elemento de chave 2 do dicionário")
+print("\tAntes:")
 print(d)
-print('\tDepois:')
+print("\tDepois:")
 # del d[2]
 d.pop(2)
 print(d)
 
-print('Remover todos itens')
+print("Remover todos itens")
 d.clear()
 
 
-print('delete the dictionary itself')
+print("delete the dictionary itself")
 del d
-

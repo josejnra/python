@@ -1,13 +1,14 @@
-'''
+"""
 Lista Encadeada (Linked List)
 fonte: https://stackoverflow.com/questions/280243/python-linked-list
-'''
+"""
 
 # nó da lista
 class node:
     def __init__(self):
-        self.data = None # contains the data
-        self.next = None # contains the reference to the next node
+        self.data = None  # contains the data
+        self.next = None  # contains the reference to the next node
+
 
 # a lista encadeada
 class linked_list:
@@ -41,7 +42,7 @@ class linked_list:
 
     # imprime lista
     def list_print(self):
-        node = self.first_node # cant point to ll!
+        node = self.first_node  # cant point to ll!
         while node:
             print(node.data)
             node = node.next

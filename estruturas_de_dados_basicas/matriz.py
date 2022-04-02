@@ -1,6 +1,6 @@
-'''
+"""
 Ler matriz
-'''
+"""
 
 matriz = []
 l = 3
@@ -19,9 +19,9 @@ matriz[0][2] = 5
 print(matriz)
 
 
-'''
+"""
 Multiplicação de matrizes
-'''
+"""
 
 import numpy as np
 

@@ -1,4 +1,4 @@
-'''
+"""
 Em python um módulo é lido como se fosse um script. Deste modo, sempre que
 um módulo for importado será executado como um script. Por isso tomar cuidado
 ao importar módulos.
@@ -39,21 +39,26 @@ As you can see, when a file is executed, Python sets globals()['__name__'] in th
 Só é executado o que está dentro da condição.
 
 font: https://stackoverflow.com/questions/419163/what-does-if-name-main-do
-'''
+"""
 import sys
+
 
 def erro(msg):
     print("Erro:", msg)
     sys.exit(1)
 
+
 def inc(x):
     return x + 1
+
 
 def dec(x):
     return x - 1
 
+
 def quadrado(x):
     return x**2
+
 
 if __name__ == "__main__":
     print(inc(10))

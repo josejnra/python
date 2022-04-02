@@ -23,7 +23,9 @@ print("\nremover um objeto da lista")
 lista.remove(7)
 print(lista)
 
-print("\nremover um elemento da lista, porém ele é retornado, caso não seja informado o índice do elemento é último elemento é removido")
+print(
+    "\nremover um elemento da lista, porém ele é retornado, caso não seja informado o índice do elemento é último elemento é removido"
+)
 print(lista.pop())
 print(lista)
 
@@ -58,7 +60,7 @@ for i, j in zip(lista, li):
 
 # converter os elementos de uma lista, de string para int
 # é utilizado list comprehensions
-lista_de_strings = ['1', '2', '5', '4']
+lista_de_strings = ["1", "2", "5", "4"]
 print(lista_de_strings)
 lista_de_strings = [int(x) for x in lista_de_strings]
 print(lista_de_strings)
@@ -73,16 +75,16 @@ print(copia_lista)
 print(lista_original)
 
 # intersecção de Listas
-lista_a = [1,2,3,4,5]
-lista_b = [1,3,5,6]
+lista_a = [1, 2, 3, 4, 5]
+lista_b = [1, 3, 5, 6]
 lista_c = list(set(lista_a) & set(lista_b))
 print(lista_c)
 # [1, 3, 5]
 
 # uniao de Listas
-lista_a = [1,2,3,4,5]
-lista_b = [1,3,5,6]
-lista_c = list(set().union(lista_a,lista_b))
+lista_a = [1, 2, 3, 4, 5]
+lista_b = [1, 3, 5, 6]
+lista_c = list(set().union(lista_a, lista_b))
 print(lista_c)
 # [1, 2, 3, 4, 5, 6]
 
@@ -90,29 +92,29 @@ print(lista_c)
 # inserir ordenado
 # importar o módulo bisect
 import bisect
+
 a = [1, 2, 4, 5]
 bisect.insort(a, 3)
 print(a)
 # Output: [1, 2, 3, 4, 5]
 
 
-
-'''
+"""
 Listas como pilhas
-'''
+"""
 pilha = [3, 4, 5]
 print(pilha)
 
-print('Empilha')
+print("Empilha")
 pilha.append(6)
 pilha.append(7)
 print(pilha)
 
-print('Desempilha')
+print("Desempilha")
 pilha.pop()
 print(pilha)
 
-'''
+"""
 Listas como filas, porém, listas não são eficientes para esta finalidade.
 Embora appends e pops no final da lista sejam rápidos,
 fazer inserts ou pops no início da lista é lento (porque todos os
@@ -120,22 +122,23 @@ demais elementos têm que ser deslocados).
 
 Para implementar uma fila, use a classe collections.deque que
 foi projetada para permitir appends e pops eficientes nas duas extremidades.
-'''
+"""
 from collections import deque
+
 fila = deque(["Eric", "John", "Michael"])
 
-fila.append("Terry")    # Terry chega
-fila.append("Graham")   # Graham chega
+fila.append("Terry")  # Terry chega
+fila.append("Graham")  # Graham chega
 
-fila.popleft()          # O primeiro a chegar parte
-fila.popleft()          # O segundo a chegar parte
+fila.popleft()  # O primeiro a chegar parte
+fila.popleft()  # O segundo a chegar parte
 
-print(fila)             # O resto da fila, em ordem de chegada
+print(fila)  # O resto da fila, em ordem de chegada
 
 
-'''
+"""
 Para inserir ordenado pode-se utilizar o módulo bisect.
-'''
+"""
 import bisect
 
 lista_ordenada = []

@@ -1,10 +1,10 @@
-'''
+"""
 - Conjuntos não possuem elementos repetidos.
 - São mutáveis.
 - São Heterogêneas.
 - Os elementos não são ordenados, não possuindo uma ordem especifica.
 - Assim, os elementos não podem ser acessados por indice.
-'''
+"""
 
 # para 'substituir' um elemento deve-se removê-lo e então inserir o novo
 s = {1, 2, 3, 4, "carro"}
