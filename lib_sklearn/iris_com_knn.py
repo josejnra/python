@@ -1,9 +1,9 @@
-import pydataset
-from sklearn import datasets
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import accuracy_score
-from sklearn.model_selection import cross_val_score
-import matplotlib.pyplot as plt
+import pydataset  # type: ignore
+from sklearn import datasets  # type: ignore
+from sklearn.neighbors import KNeighborsClassifier  # type: ignore
+from sklearn.metrics import accuracy_score  # type: ignore
+from sklearn.model_selection import cross_val_score  # type: ignore
+import matplotlib.pyplot as plt  # type: ignore
 
 
 def iris_com_pydataset():
