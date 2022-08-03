@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "scripts": {
+    "thaw": "pip install -r requirements.txt",
+    "install-poetry": "curl -sSL https://install.python-poetry.org | python3 -",
+    "generate-requirements": "poetry export --without-hashes --dev -o requirements.txt"
+  }
+}

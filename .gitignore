@@ -3,3 +3,6 @@ venv
 
 # IDE
 .idea
+
+node_modules
+requirements.txt
