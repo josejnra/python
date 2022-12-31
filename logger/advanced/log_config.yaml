@@ -1,0 +1,69 @@
+version: 1
+disable_existing_loggers: False
+
+formatters:
+    brief:
+        format: '%(message)s'
+    simple:
+        format: '[%(asctime)s] [%(name)-15s] [%(levelname)-8s][%(filename)s-%(lineno)d] %(message)s'
+        datefmt: '%Y-%m-%d %H:%M:%S'
+    error:
+        format: "[%(asctime)s] [%(levelname)s] <PID %(process)d:%(processName)s> %(name)s.%(funcName)s(): %(message)s"
+        datefmt: '%Y-%m-%d %H:%M:%S'
+    secret:
+        (): formatter.SensitiveFormatter
+        format: '[%(asctime)s] [%(name)-15s] [%(levelname)-8s][%(filename)s-%(lineno)d] %(message)s'
+
+handlers:
+    stdout:
+        class: logging.StreamHandler
+        level: INFO
+        formatter: secret
+        stream: ext://sys.stdout
+        filters:
+            - warnings_and_below
+            - my_filter
+    stderr:
+        class: logging.StreamHandler
+        level: ERROR
+        formatter: error
+        stream: ext://sys.stderr
+    # file:
+    #     class: logging.handlers.RotatingFileHandler
+    #     formatter: simple
+    #     filename: app.log
+    #     filters:
+    #         - my_filter
+    file:
+        class: logging.FileHandler
+        formatter: simple
+        filename: app.log
+        filters:
+            - my_filter
+
+filters:
+    my_filter:
+        (): filters.RedactingFilter
+        patterns:
+            - "filterthisstring"
+            - "thistoo"
+            - "metoo!"
+            - "password"
+    warnings_and_below:
+        (): "logger.filter_maker"
+        level: WARNING
+
+loggers:
+    main:
+        # other configuration for logger 'foo.bar.baz'
+        handlers:
+            - stdout
+            - stderr
+            - file
+
+root:
+    level: DEBUG
+    handlers:
+        - stderr
+        - stdout
+        - file
