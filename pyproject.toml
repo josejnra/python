@@ -14,6 +14,9 @@ pydataset = "^0.2.0"
 pymongo = "^4.2.0"
 scikit-learn = "^1.1.1"
 seaborn = "^0.11.2"
+dask = "^2022.12.1"
+fastparquet = "^2022.12.0"
+pyarrow = "^10.0.1"
 
 
 [tool.poetry.dev-dependencies]
