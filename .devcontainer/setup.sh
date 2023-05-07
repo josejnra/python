@@ -24,6 +24,8 @@ then
     npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
 fi
 
+poetry update
+
 npm install
 npm run generate-requirements
 npm run thaw
