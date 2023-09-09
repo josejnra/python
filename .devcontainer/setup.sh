@@ -29,3 +29,5 @@ poetry update
 npm install
 npm run generate-requirements
 npm run thaw
+
+git config --local core.editor "vi"

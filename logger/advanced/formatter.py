@@ -3,6 +3,11 @@ import re
 
 class SensitiveFormatter(logging.Formatter):
     """Formatter that removes sensitive information in urls."""
+
+    def format(self, record):
+        original = logging.Formatter.format(self, record)
+        return self._filter(original)
+
     @staticmethod
     def _filter(string):
         return re.sub(
@@ -10,7 +15,3 @@ class SensitiveFormatter(logging.Formatter):
             "[EMAIL REDACTED]",
             string
         )
-
-    def format(self, record):
-        original = logging.Formatter.format(self, record)
-        return self._filter(original)

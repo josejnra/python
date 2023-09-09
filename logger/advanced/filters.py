@@ -1,6 +1,6 @@
-from logging import Filter
-from typing import List
-
+from typing import List, Callable
+from logging import Filter, LogRecord
+import logging
 
 class RedactingFilter(Filter):
 
@@ -8,7 +8,7 @@ class RedactingFilter(Filter):
         super().__init__()
         self._patterns = patterns
 
-    def filter(self, record):
+    def filter(self, record) -> bool:
         record.msg = self.redact(record.msg)
         if isinstance(record.args, dict):
             for k in record.args.keys():
@@ -17,7 +17,17 @@ class RedactingFilter(Filter):
             record.args = tuple(self.redact(arg) for arg in record.args)
         return True
 
-    def redact(self, msg: str):
+    def redact(self, msg: str) -> str:
         for pattern in self._patterns:
             msg = msg.replace(pattern, "<<TOP SECRET!>>")
         return msg
+
+
+def filter_maker(level: str) -> Callable[[str], bool]:
+    """filter factory function"""
+    level = getattr(logging, level)
+
+    def msg_filter(record: LogRecord) -> bool:
+        return record.levelno <= level
+
+    return msg_filter

@@ -50,7 +50,7 @@ filters:
             - "metoo!"
             - "password"
     warnings_and_below:
-        (): "logger.filter_maker"
+        (): "filters.filter_maker"
         level: WARNING
 
 loggers:
