@@ -17,7 +17,7 @@ seaborn = "^0.12.2"
 dask = "^2023.7.0"
 fastparquet = "^2023.7.0"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 mypy = "^0.960"
 black = "^22.3.0"
 
