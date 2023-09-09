@@ -2,8 +2,8 @@ from typing import List, Callable
 from logging import Filter, LogRecord
 import logging
 
-class RedactingFilter(Filter):
 
+class RedactingFilter(Filter):
     def __init__(self, patterns: List[str]):
         super().__init__()
         self._patterns = patterns

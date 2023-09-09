@@ -11,6 +11,7 @@ class Person:
     - there is no data validation
     - easy conversion to tuple, dict
     """
+
     # class attributes
     specie: ClassVar[str] = "Homo Sapiens"
 

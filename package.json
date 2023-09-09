@@ -11,8 +11,7 @@
     }
   },
   "scripts": {
-    "thaw": "pip install -r requirements.txt",
-    "install-poetry": "curl -sSL https://install.python-poetry.org | python3 -",
-    "generate-requirements": "poetry export --without-hashes --dev -o requirements.txt"
+    "generate-requirements": "poetry export --without-hashes --dev -o requirements.txt",
+    "prep": "clear && poetry run black . && poetry run isort && poetry run flake8 && poetry run --all-files"
   }
 }
