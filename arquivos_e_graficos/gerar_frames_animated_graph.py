@@ -13,3 +13,6 @@ for n in range(len(x)):
     fig.canvas.draw()
     # dpi denota a qualidade da imagem (dots per inch)
     plt.savefig("Frame%03d.png" % n, dpi=180)
+
+    # then generate a video with:
+    # ffmpeg -framerate 10 -i Frame%03d.png nombre-video.mp4
