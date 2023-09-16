@@ -1,9 +1,9 @@
+import numpy as np
+from matplotlib import pyplot as plt
 from sklearn import datasets
+from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsRegressor
-from matplotlib import pyplot as plt
-import numpy as np
-from sklearn.metrics import mean_squared_error
 
 dados = datasets.load_diabetes()
 

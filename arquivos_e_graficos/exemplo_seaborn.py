@@ -1,7 +1,8 @@
+import random
+
+import pandas as pd
 import seaborn as sea
 from matplotlib import pyplot as plt
-import pandas as pd
-import random
 
 
 def exemplo_basico():

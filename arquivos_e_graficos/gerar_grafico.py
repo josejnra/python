@@ -1,5 +1,5 @@
-from matplotlib import pyplot as plt
 import numpy as np
+from matplotlib import pyplot as plt
 
 """
     É lido_arquivos CSV e armazenado os valores em arrays

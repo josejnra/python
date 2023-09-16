@@ -1,4 +1,4 @@
-from dataclasses import dataclass, astuple, asdict, field
+from dataclasses import asdict, astuple, dataclass, field
 from typing import ClassVar
 
 

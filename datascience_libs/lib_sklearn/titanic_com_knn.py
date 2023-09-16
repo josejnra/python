@@ -1,9 +1,9 @@
-from sklearn.neighbors import KNeighborsClassifier
+import matplotlib.pyplot as plt
+import numpy as np
 import pydataset
 from sklearn.metrics import accuracy_score
-import numpy as np
-import matplotlib.pyplot as plt
 from sklearn.model_selection import cross_val_score
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.utils import shuffle
 
 

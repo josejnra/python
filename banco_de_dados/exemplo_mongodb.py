@@ -1,5 +1,6 @@
-from pymongo import MongoClient
 import datetime
+
+from pymongo import MongoClient
 
 # Estabelecer a conexão com o Banco de Dados
 connection = MongoClient("localhost", 27017)

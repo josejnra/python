@@ -2,9 +2,8 @@
     Biblioteca que permite plotar gráficos em 2D
 """
 
-from matplotlib import pyplot as plt
-
 import numpy as np
+from matplotlib import pyplot as plt
 
 
 def simpleGraph():

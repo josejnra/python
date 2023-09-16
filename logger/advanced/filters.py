@@ -1,6 +1,6 @@
-from typing import List, Callable
-from logging import Filter, LogRecord
 import logging
+from logging import Filter, LogRecord
+from typing import Callable, List
 
 
 class RedactingFilter(Filter):

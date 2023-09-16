@@ -1,12 +1,12 @@
 # Importando Matplotlib e Numpy
 import matplotlib.pyplot as plt
 import numpy as np
-from sklearn import datasets
 import pandas as pd
-from sklearn.model_selection import train_test_split, cross_val_score
+from sklearn import datasets
 
 # Importando o módulo de Regressão Linear do scikit-learn
 from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import cross_val_score, train_test_split
 
 
 def preco_pizza():

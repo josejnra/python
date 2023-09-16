@@ -1,4 +1,4 @@
-from dependency_injector import providers, containers
+from dependency_injector import containers, providers
 
 
 class EmailClient(object):
