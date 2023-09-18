@@ -49,12 +49,12 @@
 					}
 				},
 				// "terminal.integrated.defaultProfile.linux": "poetry-shell",  # spawns a terminal on top of sh 
-				"python.defaultInterpreterPath": "/workspaces/{{ cookiecutter.project_slug }}/.venv/bin/python",
-				"mypy.dmypyExecutable": "/workspaces/{{ cookiecutter.project_slug }}/.venv/bin/dmypy",
-				"mypy-type-checker.path": ["/workspaces/{{ cookiecutter.project_slug }}/.venv/bin/mypy"],
-				"python.testing.pytestPath": "/workspaces/{{ cookiecutter.project_slug }}/.venv/bin/pytest",
-				"flake8.interpreter": ["/workspaces/{{ cookiecutter.project_slug }}/.venv/bin/flake8"],
-				"flake8.path": ["/workspaces/{{ cookiecutter.project_slug }}/.venv/bin/flake8"]
+				"python.defaultInterpreterPath": "/workspaces/python/.venv/bin/python",
+				"mypy.dmypyExecutable": "/workspaces/python/.venv/bin/dmypy",
+				"mypy-type-checker.path": ["/workspaces/python/.venv/bin/mypy"],
+				"python.testing.pytestPath": "/workspaces/python/.venv/bin/pytest",
+				"flake8.interpreter": ["/workspaces/python/.venv/bin/flake8"],
+				"flake8.path": ["/workspaces/python/.venv/bin/flake8"]
 			}
 		}
 	},
