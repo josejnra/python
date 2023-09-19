@@ -13,12 +13,13 @@ con = sqlite3.connect("escola.db")
 cur = con.cursor()
 
 # Cria uma instrução sql
-sql_create = (
-    "create table if not EXISTS cursos "
-    "(id integer primary key, "
-    "titulo varchar(100), "
-    "categoria varchar(100))"
-)
+sql_create = """
+    create table if not EXISTS cursos(
+        id integer primary key, 
+        titulo varchar(100),
+        categoria varchar(100)
+    )
+    """
 
 # Executando a instrução sql no cursor
 cur.execute(sql_create)

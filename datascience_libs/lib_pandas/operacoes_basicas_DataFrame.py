@@ -68,9 +68,7 @@ def converter_DF_to_list():
     iris = pydataset.data("iris")
 
     # converter dataframe para list
-    iris["Species"] = iris["Species"].map(
-        {"setosa": 0, "versicolor": 1, "virginica": 2}
-    )
+    iris["Species"] = iris["Species"].map({"setosa": 0, "versicolor": 1, "virginica": 2})
     x = np.array(iris.iloc[:, :4].values.tolist())
     y = np.array(iris.iloc[:, 4].values.tolist())
 

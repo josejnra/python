@@ -42,9 +42,7 @@ def preco_pizza():
     modelo.fit(X, Y)
 
     # Prevendo o preço de uma pizza de 20 cm de diâmetro
-    print(
-        "Uma pizza de 20 cm de diâmetro deve custar: R$%.2f" % modelo.predict([20][0])
-    )
+    print("Uma pizza de 20 cm de diâmetro deve custar: R$%.2f" % modelo.predict([20][0]))
 
     # Construindo um scatter plot
     # Coeficientes

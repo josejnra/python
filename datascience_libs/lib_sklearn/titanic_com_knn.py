@@ -25,9 +25,7 @@ def titanic():
     dados["survived"] = dados["survived"].map({"no": 0, "yes": 1})
 
     # mudar class
-    dados["class"] = dados["class"].map(
-        {"1st class": 0, "2nd class": 1, "3rd class": 2}
-    )
+    dados["class"] = dados["class"].map({"1st class": 0, "2nd class": 1, "3rd class": 2})
 
     k = 3
     p = 0.6
@@ -58,11 +56,7 @@ def titanic():
 
     print("eficiência titanic: %.2f" % accuracy_score(j, predicted))
 
-    print(
-        "eficiência titanic: {}".format(
-            cross_val_score(knn, x, y, cv=10, scoring="accuracy")
-        )
-    )
+    print("eficiência titanic: {}".format(cross_val_score(knn, x, y, cv=10, scoring="accuracy")))
 
 
 def titanic2():
@@ -83,9 +77,7 @@ def titanic2():
     dados["survived"] = dados["survived"].map({"no": 0, "yes": 1})
 
     # mudar class
-    dados["class"] = dados["class"].map(
-        {"1st class": 0, "2nd class": 1, "3rd class": 2}
-    )
+    dados["class"] = dados["class"].map({"1st class": 0, "2nd class": 1, "3rd class": 2})
 
     x = np.array(dados.iloc[:, :3].values.tolist())
     y = np.array(dados.iloc[:, 3].values.tolist())

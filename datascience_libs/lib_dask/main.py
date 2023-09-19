@@ -14,9 +14,7 @@ def dataframe_from_dict() -> DataFrame:
     return dd.from_dict(data, npartitions=2)
 
 
-def parquet_from_dataframe(
-    dataframe: DataFrame, path: str = PARQUET_FOLDER_PATH
-) -> None:
+def parquet_from_dataframe(dataframe: DataFrame, path: str = PARQUET_FOLDER_PATH) -> None:
     """write dataframe as parquet"""
     dataframe.to_parquet(
         path=path,

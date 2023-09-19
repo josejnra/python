@@ -133,9 +133,7 @@ def graficos_3d():
     p = ax.plot_surface(X, Y, Z, rstride=4, cstride=4, linewidth=0)
 
     ax = fig.add_subplot(1, 2, 2, projection="3d")
-    p = ax.plot_surface(
-        X, Y, Z, rstride=1, cstride=1, cmap=cm.coolwarm, linewidth=0, antialiased=False
-    )
+    p = ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=cm.coolwarm, linewidth=0, antialiased=False)
     cb = fig.colorbar(p, shrink=0.5)
 
     plt.show()
