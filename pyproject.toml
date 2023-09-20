@@ -21,6 +21,22 @@ fastparquet = "^2023.7.0"
 mypy = "^0.960"
 black = "^22.3.0"
 isort = "^5.12.0"
+flake8 = "^6.1.0"
+
+[tool.black]
+line-length = 120
+target-version = ['py310']
+extend-exclude = "node_modules"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+line_length = 88
+extend_skip = []
+
+[tool.mypy]
+exclude = [ ".venv"]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
