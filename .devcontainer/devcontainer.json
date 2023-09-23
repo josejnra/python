@@ -6,7 +6,9 @@
 	"image": "mcr.microsoft.com/devcontainers/base:jammy",
 	// binding .ssh dir into dev container for fixing issue with git
 	"mounts": [
-		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached",
+		"source=${localWorkspaceFolder}/.aws,target=/home/vscode/.aws,type=bind,consistency=cached",
+		"source=${localWorkspaceFolder}/.awsvault,target=/home/vscode/.awsvault,type=bind,consistency=cached"
 	],
 
 	"runArgs": ["--name=vscode-python"],

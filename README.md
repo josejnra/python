@@ -1,23 +1,39 @@
 # My collection of learnings, notes and snippets on Python
 
 This repository contains a collection of snippets on Python.
-Organized as follows:
 
-* [Control flow](lacos_funcoes_recursos_etc)
-* [Some Basic data structures](estruturas_de_dados_basicas)
-* [Object Oriented](poo)
-* [Ploting charts from csv files](arquivos_e_graficos)
-* [Working with database](banco_de_dados)
-* [Handling Exceptions](excecoes)
-* [Maps with folium lib](lib_folium)
-* [Examples with Numpy lib](lib_numpy)
-* [Basic operations with Pandas lib](lib_pandas)
-* [Machine Learning with Scikit-learn](lib_sklearn)
-
-### poetry
+## poetry
 In order to export requirements.txt, just run:
 ```shell
 poetry export --without-hashes -o requirements.txt
+```
+
+## aws-vault
+AWS Vault is a tool to securely store and access AWS credentials in a development environment.
+
+```shell
+# First access requires passing a access key and secret key
+aws-vault add default
+
+# List profiles
+aws-vault list
+
+# Assume role
+aws-vault exec admin --duration=1h
+
+# get temporary credentials for a profile, defautls to admin
+/workspaces/python/.devcontainer/aws_temp_crendentials.sh <optional-profile-name>
+
+# Rotate Access Key and Secret Access Key for the user
+aws-vault rotate default
+```
+
+## awscli
+
+This project uses the Docker image `amazon/aws-cli` for running aws cli commands. For that purpose a linux _alias_ was defined in [](.devcontainer/setup.sh). After we may simply run:
+
+```shell
+aws iam list-roles
 ```
 
 ## When to use python
@@ -26,3 +42,5 @@ Python is a general-purpose language, which means it’s designed to be used in 
 
 ## Referencies
 - https://www.coursera.org/articles/what-is-python-used-for-a-beginners-guide-to-using-python
+- [aws-vault](https://github.com/99designs/aws-vault)
+- [AWS CLI v2 doc](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/index.html)
