@@ -25,7 +25,7 @@ then
 fi
 
 sudo apt update -y
-sudo apt-get install -y --reinstall xdg-utils
+sudo apt-get install -y --reinstall xdg-utils graphviz
 
 npm install
 
