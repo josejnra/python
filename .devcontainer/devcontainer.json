@@ -40,7 +40,8 @@
 				"waderyan.gitblame",
 				"emeraldwalk.RunOnSave",
 				"ryanluker.vscode-coverage-gutters",
-				"tamasfe.even-better-toml"
+				"tamasfe.even-better-toml",
+				"streetsidesoftware.code-spell-checker"
 			],
 			"settings": {
 				"terminal.integrated.scrollback": 10000,
