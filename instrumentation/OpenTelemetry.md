@@ -84,9 +84,15 @@ Describes the cross-language requirements and expectations for all implementatio
 - **SDK**: Defines requirements for a language-specific implementation of the API. Configuration, data processing, and exporting concepts are also defined here.
 - **Data**: Defines the OpenTelemetry Protocol (OTLP) and vendor-agnostic semantic conventions that a telemetry backend can provide support for.
 
-### Libraries
+## OpenTelemetry vs OpenTracing
+OpenTelemetry was formed after the merger of OpenTracing and OpenCensus and is currently being actively developed as the single standard for application instrumentation under CNCF. OpenTelemetry combines the functionalities of OpenTracing and OpenCensus and also extends them.
+
+While OpenTelemetry can be your single source for all kinds of telemetry data like logs, metrics, and traces, OpenTracing was focused only on distributed tracing. For users who are using OpenTracing APIs, they can migrate to OpenTelemetry.
+
+For organizations and developers currently on the fence, the choice is clear: OpenTelemetry. Not only does it encompass the functionalities of OpenTracing, but it also offers extended capabilities. With OpenTracing being deprecated, migrating to OpenTelemetry is the logical step forward. The transition is made easier by OpenTelemetry's active efforts to ensure backward compatibility and its comprehensive approach to telemetry data.
 
 
 ## References
 
 - [OpenTelemetry](https://opentelemetry.io/docs/what-is-opentelemetry/)
+- [OpenTelemetry vs OpenTracing](https://signoz.io/blog/opentelemetry-vs-opentracing/)
