@@ -1,8 +1,11 @@
+import os
 import logging.handlers
+
+LOGLEVEL = os.getenv("LOGLEVEL", "INFO").upper()
 
 # Create logger
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
+logger.setLevel(LOGLEVEL)
 
 # Handler
 LOG_FILE = "script.log"
