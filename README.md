@@ -2,6 +2,24 @@
 
 This repository contains a collection of snippets on Python.
 
+## Python
+Python is an object oriented dynamically typed programming language
+When you run a Python program, the interpreter first compiles it to bytecode and then runs the bytecode. So you could say that Python is compiled.
+Python is technically not compiled nor interpreted, because Python is a language and you can write an interpreter or a compiler for any language.Still, most languages are considered either "compiled" or "interpreted" because they are most commonly implemented with a compiler or interpreter. In this sense, C++ is compiled and Python is interpreted.
+
+The Python interpreter software downloaded from python.org is called **CPython** because it's written in C.
+
+### CPython
+CPython is the implementation of the language called “Python” in C. Python is an interpreted programming language. Hence, Python programmers need interpreters to convert Python code into machine code. Whereas **Cython** is a compiled programming language. The **Cython** programs can be executed directly by the CPU of the underlying computer without using any interpreter. There are other Implementations are like **Jython**, **Pypy**, **Ironpython** depending upon the language platform.
+
+### Cython
+Cython is designed as a C-extension for Python. The developers can use Cython to speed up Python code execution. But they can still write and run Python programs without using Cython. But the programmers have to install both Python and C-compiler as a pre-requisite to run Cython programs.
+
+### Jython
+
+Jython is an implementation of the Python language for the Java platform. Jython 2.7 implements the same language as CPython 2.7, and nearly all of the Core Python standard library modules. (CPython is the C implementation of the Python language.)
+Writing Jython is similar to writing standard Python. The main difference is that since it compiles to Java Bytecode you can smoothly interact with Java Libraries. Of course it has a requirement on the JVM but has no Global Interpreter Lock (Famous GIL).
+
 ## poetry
 In order to export requirements.txt, just run:
 ```shell
