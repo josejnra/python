@@ -1,15 +1,19 @@
 from fastapi import FastAPI
 
+from logger import logger
+
 app = FastAPI()
 
 
 @app.get("/page-1")
-def page1():
+async def page1():
+    logger.info("processing page - 1")
     return {"message": "page-1"}
 
 
 @app.get("/page-2")
-def page2():
+async def page2():
+    logger.info("processing page - 2")
     return {"message": "page-2"}
 
 
