@@ -45,6 +45,38 @@ Games average 30 pair-moves (60 moves total)
 
 At the heart of async IO are **coroutines**. A **coroutine** is a specialized version of a Python generator function. Let’s start with a baseline definition and then build off of it as you progress here: *a coroutine is a function that can suspend its execution before reaching return, and it can indirectly pass control to another coroutine for some time*.
 
+### async/await
+When you want to return a value from an async function, just use the `return` statement as you would in regular functions. However, keep in mind that the returned value will be wrapped in an `asyncio.Future` object, not the actual value. You’ll need to use await to get the value when calling this async function. Example:
+```python
+async def calculate_result():
+  await asyncio.sleep(1)
+  return "Result!"
+
+async def main():
+  result = await calculate_result()
+  print(result)
+
+asyncio.run(main())
+```
+Here, `calculate_result` is an async function that returns a value after asynchronously waiting for 1 second. In the `main()` function, you can use `await` to get the actual value and print it.
+
+
+To call an async function, you can’t simply use the normal function call syntax, because doing so would just return a coroutine object, not the actual result of the function. Instead, you have to use the `await` keyword to call the async function, or use `asyncio.create_task` or similar functions to run it concurrently:
+
+```python
+# Using `await` to call async function
+result = await async_function()
+
+# Using `asyncio.create_task` to run concurrently
+task = asyncio.create_task(async_function())
+```
+
+If you need to call an async function from synchronous code, you can use `asyncio.run()` or create an event loop that runs a given coroutine.
+```python
+def sync_function():
+    asyncio.run(my_async_function())
+```
+
 ### Scheduling Asynchronous Tasks
 Async frameworks need a scheduler, usually called "event loop". The loop keeps track of all the running tasks. When a function is suspended, return controls to the loop, which then finds another function to start or resume. This is called **cooperative multi-tasking**.
 
@@ -142,6 +174,26 @@ When comparing HTTPX and AIOHTTP, one of the main differences is the scope of th
 - HTTP/2 support: HTTPX supports HTTP/2, the latest HTTP protocol version. AIOHTTP does not have this feature.
 - Performance: AIOHTTP is generally considered to have excellent performance compared to HTTPX. See the next section for a detailed analysis.
 
+## Asyncio vs Threading
+
+### Asyncio
+- Asynchronous programming
+- Software coroutine-based concurrency
+- Lightweight
+- No GIL
+- Many coroutines in one thread
+- Non-blocking I/O with subprocesses and streams
+- 100,000+ tasks
+
+### Threading
+- Procedural and Object-oriented programming.
+- Native thread-based concurrency
+- Medium weight, heavier than coroutines, lighter than processes.
+- Limited by the GIL
+- Many threads in one process
+- Blocking I/O, generally
+- 100s to 1,000s tasks
+
 ## Referencies
 - [Async IO Python](https://realpython.com/async-io-python/)
 - [Python Async Function](https://blog.finxter.com/python-async-function)
@@ -151,3 +203,5 @@ When comparing HTTPX and AIOHTTP, one of the main differences is the scope of th
 - [httpx vs requests vs aiohttp](https://oxylabs.io/blog/httpx-vs-requests-vs-aiohttp)
 - [FastAPI scale with non-async request handling](https://anecdotes.dev/fastapi-scale-with-non-asyncio-requests-handling-e10b181eaa02)
 - [Python concurrency](https://realpython.com/python-concurrency/)
+- [Asyncio vs Threading](https://superfastpython.com/asyncio-vs-threading/)
+- [Python Async Function](https://blog.finxter.com/python-async-function/)
