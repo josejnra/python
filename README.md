@@ -27,20 +27,23 @@ poetry export --without-hashes -o requirements.txt
 ```
 
 ## aws-vault
-AWS Vault is a tool to securely store and access AWS credentials in a development environment.
+[AWS Vault](https://99designs.com/blog/engineering/aws-vault/) is a tool to securely store and access AWS credentials in a development environment.
+
+First off, have `.aws/config` configured based on the profiles to be used. Then:
 
 ```shell
-# First access requires passing a access key and secret key
-aws-vault add default
-
 # List profiles
 aws-vault list
 
+# Set access key and secret key for the "main" profile
+aws-vault add <profile-name>
+
+# if you're using a container to run aws commands skip this.
+# if you have aws-cli installed: get temporary credentials for a profile, defaults to admin.
+/workspaces/python/.devcontainer/aws_temp_crendentials.sh <optional-profile-name>
+
 # Assume role
 aws-vault exec admin --duration=1h
-
-# get temporary credentials for a profile, defautls to admin
-/workspaces/python/.devcontainer/aws_temp_crendentials.sh <optional-profile-name>
 
 # Rotate Access Key and Secret Access Key for the user
 aws-vault rotate default
@@ -52,6 +55,14 @@ This project uses the Docker image `amazon/aws-cli` for running aws cli commands
 
 ```shell
 aws iam list-roles
+```
+
+```shell
+aws sts get-caller-identity
+```
+
+```shell
+aws sts assume-role --role-arn arn:aws:iam::<account-id>:role/<role-name> --role-session-name my-role-session
 ```
 
 ## When to use python

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROFILE="${VARIABLE:-admin}"
+PROFILE="${1:-admin}"
 
 # export credentials and save it in credentials file
 aws-vault export $PROFILE > ~/.aws/credentials
