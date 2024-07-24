@@ -13,12 +13,12 @@
 
 	"runArgs": ["--name=vscode-python"],
 
+	"remoteEnv": {
+		"PYTHONPYCACHEPREFIX": "/home/vscode/.cache/cpython/"
+	},
+
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
-		"ghcr.io/devcontainers/features/node:1": {
-			"nodeGypDependencies": true,
-			"version": "lts"
-		},
 		"ghcr.io/devcontainers-contrib/features/poetry:2": {
 			"version": "latest"
 		},
@@ -41,7 +41,8 @@
 				"emeraldwalk.RunOnSave",
 				"ryanluker.vscode-coverage-gutters",
 				"tamasfe.even-better-toml",
-				"streetsidesoftware.code-spell-checker"
+				"streetsidesoftware.code-spell-checker",
+				"njpwerner.autodocstring"
 			],
 			"settings": {
 				"terminal.integrated.scrollback": 10000,
