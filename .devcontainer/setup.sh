@@ -17,3 +17,5 @@ echo "export AWS_VAULT_BACKEND=file" >> ~/.bashrc
 echo "alias aws='docker run --rm -it -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cli'" >> ~/.bashrc
 
 git config --local core.editor "vi"
+
+/bin/bash .devcontainer/vscode_settings.sh

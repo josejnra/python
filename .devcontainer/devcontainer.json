@@ -3,7 +3,7 @@
 {
 	"name": "Ubuntu",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"image": "mcr.microsoft.com/devcontainers/base:noble",
 	// binding .ssh dir into dev container for fixing issue with git
 	"mounts": [
 		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached",
@@ -51,14 +51,8 @@
 						"path": "poetry",
 						"args": ["shell"]
 					}
-				},
+				}
 				// "terminal.integrated.defaultProfile.linux": "poetry-shell",  # spawns a terminal on top of sh 
-				"python.defaultInterpreterPath": "/workspaces/python/.venv/bin/python",
-				"mypy.dmypyExecutable": "/workspaces/python/.venv/bin/dmypy",
-				"mypy-type-checker.path": ["/workspaces/python/.venv/bin/mypy"],
-				"python.testing.pytestPath": "/workspaces/python/.venv/bin/pytest",
-				"flake8.interpreter": ["/workspaces/python/.venv/bin/flake8"],
-				"flake8.path": ["/workspaces/python/.venv/bin/flake8"]
 			}
 		}
 	},
