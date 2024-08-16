@@ -31,18 +31,17 @@
 			"extensions": [
 				"ms-azuretools.vscode-docker",
 				"ms-python.python",
-				"ms-python.autopep8",
-				"ms-python.flake8",
 				"ms-python.pylint",
 				"ms-python.vscode-pylance",
 				"ms-python.mypy-type-checker",
+				"ryanluker.vscode-coverage-gutters",
 				"eamodio.gitlens",
 				"waderyan.gitblame",
-				"emeraldwalk.RunOnSave",
-				"ryanluker.vscode-coverage-gutters",
 				"tamasfe.even-better-toml",
 				"streetsidesoftware.code-spell-checker",
-				"njpwerner.autodocstring"
+				"njpwerner.autodocstring",
+				"Supermaven.supermaven",
+				"charliermarsh.ruff"
 			],
 			"settings": {
 				"terminal.integrated.scrollback": 10000,
@@ -51,7 +50,11 @@
 						"path": "poetry",
 						"args": ["shell"]
 					}
-				}
+				},
+				"[python]": {
+					"editor.defaultFormatter": "charliermarsh.ruff",
+					"source.organizeImports": "explicit"
+				}	
 				// "terminal.integrated.defaultProfile.linux": "poetry-shell",  # spawns a terminal on top of sh 
 			}
 		}

@@ -8,6 +8,10 @@ Filters provide a finer grained facility for determining which log records to ou
 
 Formatters specify the layout of log records in the final output.
 
+<p align="center">
+    <img src="loggers-overview.png" alt="loggers overview" />
+</p>
+
 ## Reference
 
 - https://docs.python.org/3/library/logging.html#module-logging

@@ -303,6 +303,7 @@ cython_debug/
 # End of https://www.toptal.com/developers/gitignore/api/python,node
 
 .DS_Store
+.vscode
 requirements.txt
 .aws/credentials
 .awsvault
