@@ -3,15 +3,16 @@ Lista Encadeada (Linked List)
 fonte: https://stackoverflow.com/questions/280243/python-linked-list
 """
 
+
 # nó da lista
-class node:
-    def __init__(self):
-        self.data = None  # contains the data
+class Node:
+    def __init__(self, data):
+        self.data = data  # holds the data
         self.next = None  # contains the reference to the next node
 
 
 # a lista encadeada
-class linked_list:
+class LinkedList:
     def __init__(self):
         self.first_node = None
         self.last_node = None
@@ -19,9 +20,7 @@ class linked_list:
     # adicionar um novo nó na lista
     def add_node(self, data):
         # cria um novo nó apontando para ninguém
-        new_node = node()
-        new_node.data = data
-        new_node.next = None
+        new_node = Node(data)
 
         # variável last_node irá apontar para o novo nó, assim a lista pode recuperar
         # o último nó sem precisar percorrer toda a lista
@@ -47,13 +46,31 @@ class linked_list:
             print(node.data)
             node = node.next
 
+    def reverse(self):
+        prev = None
+        current = self.first_node
+        self.first_node = self.last_node
+        self.last_node = current
 
-ll = linked_list()
+        while current:
+            next_node = current.next
+            current.next = prev
+            prev = current
+            current = next_node
+
+
+ll = LinkedList()
 
 # add elementos
 ll.add_node(1)
-ll.add_node(3)
 ll.add_node(2)
+ll.add_node(3)
 
+# imprime lista
+ll.list_print()
+
+print("reverse order:")
+# inverte a lista
+ll.reverse()
 # imprime lista
 ll.list_print()

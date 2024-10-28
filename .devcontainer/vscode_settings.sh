@@ -67,7 +67,7 @@ if [ -n "$venv_folder_name" ]; then
 fi
 
 # set settings
-update_setting "python.defaultInterpreterPath" '"/home/vscode/.cache/pypoetry/virtualenvs/'${venv_folder_name}'/bin/python"'
+update_setting "python.defaultInterpreterPath" '"/home/vscode/.cache/pypoetry/virtualenvs/'${venv_folder_name}'/bin/python3"'
 update_setting "mypy.dmypyExecutable" '"/home/vscode/.cache/pypoetry/virtualenvs/'${venv_folder_name}'/bin/dmypy"'
 update_setting "mypy-type-checker.path" '["/home/vscode/.cache/pypoetry/virtualenvs/'${venv_folder_name}'/bin/mypy"]'
 update_setting "python.testing.pytestPath" '"/home/vscode/.cache/pypoetry/virtualenvs/'${venv_folder_name}'/bin/pytest"'
