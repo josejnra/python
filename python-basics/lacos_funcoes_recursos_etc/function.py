@@ -6,6 +6,7 @@ def sum(a, b):
 c = sum(1, 3)
 print(c)
 
+
 # funções com valores padrões para seus argumentos
 def nome_completo(primeiro_nome, segundo_nome="nunes"):
     return primeiro_nome + " " + segundo_nome

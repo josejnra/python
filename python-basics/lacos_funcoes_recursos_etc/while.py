@@ -12,6 +12,6 @@ while imposto > 0:
     else:
         imposto = float(imposto)
 
-    print("Valor real: {}".format(salario - (salario * (imposto * 0.01))))
+    print(f"Valor real: {salario - (salario * (imposto * 0.01))}")
 
 input("Presione ENTER para sair...")

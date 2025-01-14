@@ -5,7 +5,7 @@
 from matplotlib import pyplot as plt
 
 # ler arquivo CSV com os dados
-f = open("arquivos_texto/semperda.csv", "r")
+f = open("arquivos_texto/semperda.csv")
 x = list()
 y = list()
 for linha in f:

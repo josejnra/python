@@ -1,5 +1,4 @@
 # Alguns exemplos de listas em Python
-# coding: utf-8
 
 """
 Listas são similares a strings, que são uma sequência de caracteres, no entanto,

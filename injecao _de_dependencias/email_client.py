@@ -1,7 +1,7 @@
 from dependency_injector import containers, providers
 
 
-class EmailClient(object):
+class EmailClient:
     def __init__(self, config):
         self._config = config
         self.connect(self._config)
@@ -11,7 +11,7 @@ class EmailClient(object):
         pass
 
 
-class EmailReader(object):
+class EmailReader:
     def __init__(self, client):
         try:
             self._client = client

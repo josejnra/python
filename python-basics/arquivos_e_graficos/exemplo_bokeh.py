@@ -1,5 +1,4 @@
 # Importando o módulo Bokeh
-import bokeh
 
 # Usando output_file para gravar as visualizações
 from bokeh.plotting import figure, output_file, show

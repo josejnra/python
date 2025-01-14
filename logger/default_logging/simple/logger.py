@@ -1,6 +1,6 @@
+import logging.handlers
 import os
 import sys
-import logging.handlers
 
 LOGLEVEL = os.getenv("LOGLEVEL", "INFO").upper()
 

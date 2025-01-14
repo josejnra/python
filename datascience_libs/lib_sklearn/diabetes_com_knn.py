@@ -24,13 +24,13 @@ for i in range(len(predict)):
     print('\t Correto: {}'.format(y_test[i]))
 """
 
-print("Número de amostras para treino: {}".format(len(x_train)))
-print("Número de amostras para validação: {}".format(len(x_test)))
-print("Número total de amostras: {}".format(len(x)))
+print(f"Número de amostras para treino: {len(x_train)}")
+print(f"Número de amostras para validação: {len(x_test)}")
+print(f"Número total de amostras: {len(x)}")
 
 erro_medio_quadrado = mean_squared_error(y_test, predict)
 
-print("Erro médio quadrado: {}".format(erro_medio_quadrado))
+print(f"Erro médio quadrado: {erro_medio_quadrado}")
 
 plt.plot(np.linspace(1, len(y_test), len(y_test)), y_test, label="Correto", c="#000000")
 plt.plot(np.linspace(-1, len(predict), len(predict)), predict, label="Predito", c="r")

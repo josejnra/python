@@ -13,13 +13,13 @@ def exemplo_simples():
         columns=["repository", "stars"],
     )
 
-    print("\nDimensão do dataframe, (linhas, colunas): \n{}".format(df.shape))
+    print(f"\nDimensão do dataframe, (linhas, colunas): \n{df.shape}")
 
-    print("\nDataframe: \n{}".format(df))
+    print(f"\nDataframe: \n{df}")
 
     print("\nImpressão de uma das colunas: \n{}".format(df["stars"]))
 
-    print("\nBusca pelo índice: \n{}".format(df.iloc[0]))
+    print(f"\nBusca pelo índice: \n{df.iloc[0]}")
 
 
 def mexendo_com_datasets():
@@ -40,13 +40,13 @@ def mexendo_com_datasets():
     print("{}".format(titanic["class"].value_counts()))
 
     print("\nMemória ocupada em bytes para cada coluna:")
-    print("{}".format(titanic.memory_usage()))
+    print(f"{titanic.memory_usage()}")
 
     print("\nMemória total ocupada pelo dataframe:")
     print("{} MB".format(round(float(titanic["sex"].nbytes * 5 / 1024), 3)))
 
     print("\nMemória ocupada por um registro do dataframe:")
-    print("{} Bytes".format(titanic.iloc[0].nbytes))
+    print(f"{titanic.iloc[0].nbytes} Bytes")
 
 
 mexendo_com_datasets()

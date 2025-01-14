@@ -52,7 +52,7 @@ def mp_future_main():
 # multiprocessing
 ########################
 
-from multiprocessing import Manager, Pool, Process, Queue, set_start_method
+from multiprocessing import Manager, Pool, Process, Queue
 
 
 def worker_function(worker_id: int, queue: Queue):

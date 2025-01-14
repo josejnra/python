@@ -1,7 +1,6 @@
 """
  Pylab combina funcionalidades do pyplot com funcionalidades do Numpy
 """
-from mpl_toolkits.mplot3d.axes3d import Axes3D
 from pylab import *
 
 alpha = 0.7

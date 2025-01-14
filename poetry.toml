@@ -1,5 +1,4 @@
 [virtualenvs]
-name = "venv"
 create = true
 in-project = false
 path = "/home/vscode/.cache/pypoetry/virtualenvs"

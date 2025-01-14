@@ -1,4 +1,4 @@
-class EmailReader(object):
+class EmailReader:
     def __init__(self, client):
         try:
             self._client = client

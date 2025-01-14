@@ -23,7 +23,7 @@ def cpu_bound():
 async def main():
     loop = asyncio.get_running_loop()
 
-    ## Options:
+    # Options:
 
     # 1. Run in the default loop's executor:
     result = await loop.run_in_executor(None, blocking_io)
