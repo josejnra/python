@@ -22,7 +22,7 @@ memray = "^1.9.1"
 uvicorn = "^0.24.0.post1"
 httpx = {extras = ["http2"], version = "^0.25.2"}
 aiohttp = "^3.9.0"
-fastapi = "^0.109.2"
+fastapi = "^0.115.7"
 duckdb = "^0.10.0"
 pyarrow = "^15.0.0"
 polars = "^0.20.8"
