@@ -51,6 +51,12 @@
 						"args": ["shell"]
 					}
 				},
+				"files.exclude": {
+					"**/__pycache__": true
+				},
+				"python.analysis.autoImportCompletions": true,
+				"python.analysis.autoImportUserSymbols": true,
+				"python.analysis.indexing": true,
 				"[python]": {
 					"editor.defaultFormatter": "charliermarsh.ruff",
 					"source.organizeImports": "explicit"

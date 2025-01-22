@@ -13,11 +13,10 @@ class Node:
                 self.left = Node(value)
             else:
                 self.left.insert(value)
+        elif self.right is None:
+            self.right = Node(value)
         else:
-            if self.right is None:
-                self.right = Node(value)
-            else:
-                self.right.insert(value)
+            self.right.insert(value)
 
     def inorder(self) -> list[int]:
         items = []
