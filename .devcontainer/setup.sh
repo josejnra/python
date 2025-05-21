@@ -6,6 +6,8 @@ sudo apt-get install -y --reinstall xdg-utils graphviz
 poetry install
 poetry update
 
+poetry self add poetry-plugin-shell
+
 # install aws-vault
 # https://github.com/99designs/aws-vault/releases
 sudo curl -L -o /usr/local/bin/aws-vault https://github.com/99designs/aws-vault/releases/download/v7.2.0/aws-vault-linux-amd64
