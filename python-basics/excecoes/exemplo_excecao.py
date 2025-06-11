@@ -11,7 +11,7 @@ def abrir_arquivo():
     try:
         f = open("arquivo_qualquer.txt", "w")
         f.write("Gravando no arquivo")
-    except IOError:
+    except OSError:
         print("Erro: arquivo não encontrado ou não pode ser salvo.")
     else:
         print("Conteúdo gravado com sucesso!")
@@ -23,7 +23,7 @@ def abrir_arquivo_f():
     try:
         f = open("arquivo_qualquer.txt", "w")
         f.write("Gravando no arquivo")
-    except IOError:
+    except OSError:
         print("Erro: arquivo não encontrado ou não pode ser salvo.")
     else:
         print("Conteúdo gravado com sucesso!")
@@ -40,7 +40,7 @@ def askint():
             print("Você não digitou um número!")
             continue
         else:
-            print("Você digitou o número {}".format(val))
+            print(f"Você digitou o número {val}")
             break
         finally:
             print("Fim da execuçaõ!")
@@ -54,7 +54,7 @@ def mensagem_erro():
             print(each)
     except AttributeError as e:
         print("Erro: ", e)
-    except IOError as e:
+    except OSError as e:
         print("Erro de I/O: ", e)
 
 

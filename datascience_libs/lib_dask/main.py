@@ -1,5 +1,6 @@
 import itertools
-from typing import Any, Dict, Iterable, List
+from collections.abc import Iterable
+from typing import Any
 
 import dask.dataframe as dd
 from dask.dataframe.core import DataFrame
@@ -30,7 +31,7 @@ def read_from_parquet(path: str) -> DataFrame:
     return dd.read_parquet(path, engine="pyarrow-dataset")
 
 
-def list_from_dataframe(df: DataFrame) -> Iterable[Dict[str, List[Any]]]:
+def list_from_dataframe(df: DataFrame) -> Iterable[dict[str, list[Any]]]:
     """Records from a dataframe"""
     all_partitions = list(df.map_partitions(lambda x: x.to_dict(orient="records")))
     return itertools.chain.from_iterable(all_partitions)

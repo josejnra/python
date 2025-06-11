@@ -1,10 +1,10 @@
 import logging
+from collections.abc import Callable
 from logging import Filter, LogRecord
-from typing import Callable, List
 
 
 class RedactingFilter(Filter):
-    def __init__(self, patterns: List[str]):
+    def __init__(self, patterns: list[str]):
         super().__init__()
         self._patterns = patterns
 

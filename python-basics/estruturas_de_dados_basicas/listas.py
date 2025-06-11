@@ -54,7 +54,7 @@ for i in reversed(lista):
 
 print("\npercorrer duas listas em parelelo")
 li = lista[:]
-for i, j in zip(lista, li):
+for i, j in zip(lista, li, strict=False):
     print(i, j)
 
 # converter os elementos de uma lista, de string para int

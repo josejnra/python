@@ -7,6 +7,7 @@ poetry install
 poetry update
 
 poetry self add poetry-plugin-shell
+poetry self add poetry-plugin-export
 
 # install aws-vault
 # https://github.com/99designs/aws-vault/releases
