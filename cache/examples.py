@@ -4,10 +4,10 @@
 # lru_cache (Least Recent Used) is one implementation of it
 
 
-from functools import lru_cache
+from functools import cache
 
 
-@lru_cache(maxsize=None)
+@cache
 def fib(n):
     if n < 2:
         return n
