@@ -40,17 +40,11 @@
 				"tamasfe.even-better-toml",
 				"streetsidesoftware.code-spell-checker",
 				"njpwerner.autodocstring",
-				"Supermaven.supermaven",
-				"charliermarsh.ruff"
+				"charliermarsh.ruff",
+				"anthropic.claude-code"
 			],
 			"settings": {
 				"terminal.integrated.scrollback": 10000,
-				"terminal.integrated.profiles.linux": {
-					"poetry-shell": {
-						"path": "poetry",
-						"args": ["shell"]
-					}
-				},
 				"files.exclude": {
 					"**/__pycache__": true
 				},
